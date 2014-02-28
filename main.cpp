@@ -2,6 +2,7 @@
 #include "SDL/SDL_image.h"
 #include "SDL/SDL_mixer.h"
 #include "Pelotita.h"
+#include "SDL/SDL_mixer.h"
 #include "Lista.h"
 #include <vector>
 #include <string>
@@ -19,6 +20,7 @@ SDL_Surface *main_menu = NULL;
 SDL_Surface *start = NULL;
 SDL_Surface *score = NULL;
 SDL_Surface *quitgame = NULL;
+Mix_Music *music = NULL;
 
 int start_width = 100;
 int start_heigth = 40;
@@ -58,6 +60,11 @@ bool init()
         return false;
     }
 
+    if( Mix_OpenAudio( 22050, MIX_DEFAULT_FORMAT, 2, 4096 ) == -1 )
+    {
+        return false;
+    }
+
     SDL_WM_SetCaption( "Press an Arrow Key", NULL );
 
     return true;
@@ -72,6 +79,14 @@ bool load_files()
     {
         return false;
     }
+
+    music = Mix_LoadMUS( "DissonantWaltz.ogg" );
+
+    if( music == NULL )
+    {
+        return false;
+    }
+        return true;
 
     return true;
 }
@@ -98,7 +113,7 @@ Lista lis;
 void crearPelotita(int num)
 {
     // CON 5 SE CREA CHORIZO, Y CON 100 DE UNA EN UNA
-    if(num%5==0)
+    if(num%100==0)
     {
         lis.agregarNodo(new Pelotita());
     }
@@ -201,6 +216,15 @@ int main()
 
     //Aplicamos la surface
     apply_surface( 0, 0, background, screen );
+
+    //PLAY LA MUSICA
+    if( Mix_PlayingMusic() == 0 )
+    {
+        if( Mix_PlayMusic( music, -1 ) == -1 )
+        {
+            return 1;
+        }
+    }
 
     //IMPRIMIMOS LAS PELOTITAS
     lis.imprimirTodos(screen);

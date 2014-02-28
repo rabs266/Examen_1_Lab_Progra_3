@@ -18,8 +18,8 @@ Pelotita::Pelotita()
     this-> y = 0 + rand()%(479+1-0);
 
     //Velocidad Random
-    this-> velocidad_x = 1 + rand()%(5+1-0);
-    this-> velocidad_y = 1 + rand()%(5+1-0);
+    this-> velocidad_x = 1 + rand()%(2+1-0);
+    this-> velocidad_y = 1 + rand()%(2+1-0);
 
     if(x>323){
     velocidad_x = (velocidad_x*-1);

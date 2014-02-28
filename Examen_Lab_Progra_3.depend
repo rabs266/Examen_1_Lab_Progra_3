@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1393609663 source:/home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/main.cpp
+1393611549 source:/home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/main.cpp
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	"SDL/SDL_mixer.h"
 	"Pelotita.h"
+	"SDL/SDL_mixer.h"
 	"Lista.h"
 	<vector>
 	<string>
@@ -16,7 +17,7 @@
 	<stdlib.h>
 	<time.h>
 
-1393608378 source:/home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/Pelotita.cpp
+1393609779 source:/home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/Pelotita.cpp
 	"Pelotita.h"
 
 1393608745 source:/home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/Lista.cpp
