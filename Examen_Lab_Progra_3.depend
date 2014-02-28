@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1393609663 source:/home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/main.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_mixer.h"
+	"Pelotita.h"
+	"Lista.h"
+	<vector>
+	<string>
+	<fstream>
+
+1393545451 /home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/Pelotita.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<vector>
+	<stdlib.h>
+	<time.h>
+
+1393608378 source:/home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/Pelotita.cpp
+	"Pelotita.h"
+
+1393608745 source:/home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/Lista.cpp
+	"Lista.h"
+
+1393545482 /home/alexander/Projects/CodeBlocks/Examen_Lab_Progra_3/Lista.h
+	"Pelotita.h"
+
